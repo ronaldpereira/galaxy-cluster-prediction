@@ -1,9 +1,9 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-import libs.neural_network as NN
 import libs.arg_parse_config as APC
 import libs.data_preprocessing as DP
+import libs.neural_network as NN
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -18,8 +18,8 @@ encoded_classes = data_prep.class_encoder(sdss['class'])
 
 x_train, x_test, y_train, y_test = train_test_split(sdss.drop('class', axis=1).values, encoded_classes, train_size=0.8)
 
-nn = NN.NeuralNetwork(x_train.shape[1], y_train.shape[1])
+nn = NN.NeuralNetwork(x_train.shape[1], y_train.shape[1], args.hidden_layers, args.hidden_layers_size)
 
-nn.train(x_train, y_train, round(x_train.shape[0]/4), epochs=40)
+nn.train(x_train, y_train, batch_size=args.batch_size, epochs=args.epochs)
 
 nn.test(x_test, y_test)

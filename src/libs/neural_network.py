@@ -1,19 +1,21 @@
 from keras.layers import Activation, Dense, InputLayer
 from keras.models import Sequential
-from keras.optimizers import Adam
+from keras.optimizers import SGD
+import numpy as np
 
 class NeuralNetwork:
-    def __init__(self, input_dim, n_classes):
+    def __init__(self, input_dim, n_classes, hidden_layer, hidden_size):
         self.model = Sequential()
         self.model.add(InputLayer(input_shape=(input_dim,)))
-        self.model.add(Dense(input_dim**2))
-        self.model.add(Activation('relu'))
-        self.model.add(Dense(input_dim*100))
-        self.model.add(Activation('sigmoid'))
+
+        for _ in range(hidden_layer):
+            self.model.add(Dense(hidden_size))
+            self.model.add(Activation('sigmoid'))
+
         self.model.add(Dense(n_classes))
         self.model.add(Activation('softmax'))
 
-        self.model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['accuracy'])
+        self.model.compile(loss='categorical_crossentropy', optimizer=SGD(lr=0.001), metrics=['accuracy'])
 
         self.model.summary()
 
