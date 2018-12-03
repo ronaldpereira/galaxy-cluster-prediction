@@ -16,10 +16,10 @@ data_prep = DP.DataPreprocessing()
 
 encoded_classes = data_prep.class_encoder(sdss['class'])
 
-x_train, x_test, y_train, y_test = train_test_split(sdss.drop('class', axis=1).values, encoded_classes, train_size=0.8)
+x_train, x_test, y_train, y_test = train_test_split(sdss.drop('class', axis=1).values, encoded_classes, train_size=0.66)
 
-nn = NN.NeuralNetwork(x_train.shape[1], y_train.shape[1], args.hidden_layers, args.hidden_layers_size)
+nn = NN.NeuralNetwork(x_train.shape[1], y_train.shape[1], args.hidden_layers, args.hidden_layers_size, args.learning_rate)
 
 nn.train(x_train, y_train, batch_size=args.batch_size, epochs=args.epochs)
 
-nn.test(x_test, y_test)
+nn.test(x_test, y_test, data_prep.lb)
