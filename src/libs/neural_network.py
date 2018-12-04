@@ -22,7 +22,7 @@ class NeuralNetwork:
         self.model.summary()
 
     def train(self, x_train, y_train, batch_size=None, epochs=1):
-        self.model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, validation_split=0.2)
+        self.model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, validation_split=0.2, verbose=2)
 
     def test(self, x_test, y_test, label_binarizer):
         test_loss, test_acc = self.model.evaluate(x_test, y_test)
