@@ -1,6 +1,6 @@
 # Sloan Digital Sky Survey Class Prediction
 
-Sloan Digital Sky Survey dataset class prediction using MLP (Multi-Layer Perceptron) Artificial NeuralNetworks (ANN).
+Sloan Digital Sky Survey dataset class prediction using MLP (Multi-Layer Perceptron) Artificial Neural Networks (ANN).
 
 ## Usage
 
