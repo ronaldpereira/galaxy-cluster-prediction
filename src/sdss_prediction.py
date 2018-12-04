@@ -16,7 +16,7 @@ data_prep = DP.DataPreprocessing()
 
 encoded_classes = data_prep.class_encoder(sdss['class'])
 
-x_train, x_test, y_train, y_test = train_test_split(sdss.drop('class', axis=1).values, encoded_classes, train_size=0.66)
+x_train, x_test, y_train, y_test = train_test_split(sdss.drop('class', axis=1).values, encoded_classes, train_size=0.666)
 
 nn = NN.NeuralNetwork(x_train.shape[1], y_train.shape[1], args.hidden_layers, args.hidden_layers_size, args.learning_rate)
 
