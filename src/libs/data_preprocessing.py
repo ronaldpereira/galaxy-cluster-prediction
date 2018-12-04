@@ -11,7 +11,7 @@ class DataPreprocessing:
         return class_encoded
 
     def balance_class(self, dataframe, class_to_balance, multiplier):
-        class_df = dataframe.loc[dataframe['class'] == class_to_balance].reset_index().copy()
+        class_df = dataframe.loc[dataframe['class'] == class_to_balance].reset_index(drop=True).copy()
 
         concat_array = [dataframe]
 
@@ -20,4 +20,5 @@ class DataPreprocessing:
 
         dataframe = pd.concat(concat_array, ignore_index=True)
 
-        return dataframe
+        # Randomize the order of the balanced dataframe
+        return dataframe.sample(frac=1).reset_index(drop=True)
