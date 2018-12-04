@@ -1,8 +1,8 @@
-from keras.layers import Activation, Dense, InputLayer
+import numpy as np
+from keras.layers import Activation, Dense, Dropout, InputLayer
 from keras.models import Sequential
 from keras.optimizers import SGD
 from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
-import numpy as np
 
 class NeuralNetwork:
     def __init__(self, input_dim, n_classes, hidden_layer, hidden_size, learning_rate):
@@ -11,6 +11,7 @@ class NeuralNetwork:
 
         for _ in range(hidden_layer):
             self.model.add(Dense(hidden_size))
+            self.model.add(Dropout(np.random.uniform(0.2, 0.5)))
             self.model.add(Activation('sigmoid' if np.random.randint(2) == 1 else 'tanh'))
 
         self.model.add(Dense(n_classes))
