@@ -1,6 +1,6 @@
 # Sloan Digital Sky Survey Class Prediction
 
-Sloan Digital Sky Survey dataset class prediction using Artificial Neural Networks (ANN).
+Sloan Digital Sky Survey dataset class prediction using MLP (Multi-Layer Perceptron) Artificial NeuralNetworks (ANN).
 
 ## Usage
 
@@ -9,7 +9,7 @@ usage: sdss_prediction.py [-h] [-b BATCH_SIZE] [-e EPOCHS] [-r LEARNING_RATE]
                           [-l HIDDEN_LAYERS] [-s HIDDEN_LAYERS_SIZE]
                           input_path
 
-Sloan Digital Sky Survey dataset class prediction using Artificial Neural
+Sloan Digital Sky Survey dataset class prediction using MLP (Multi-Layer Perceptron) Artificial Neural
 Networks (ANN).
 
 positional arguments:
