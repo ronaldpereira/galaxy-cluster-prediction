@@ -1,0 +1,100 @@
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 200)               3600      
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 200)               0         
+_________________________________________________________________
+activation_1 (Activation)    (None, 200)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 200)               40200     
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 200)               0         
+_________________________________________________________________
+activation_2 (Activation)    (None, 200)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 3)                 603       
+_________________________________________________________________
+activation_3 (Activation)    (None, 3)                 0         
+=================================================================
+Total params: 44,403
+Trainable params: 44,403
+Non-trainable params: 0
+_________________________________________________________________
+Train on 2664 samples, validate on 666 samples
+Epoch 1/20
+ - 6s - loss: 0.6830 - acc: 0.7706 - val_loss: 0.6397 - val_acc: 0.8063
+Epoch 2/20
+ - 5s - loss: 0.6587 - acc: 0.7909 - val_loss: 0.6081 - val_acc: 0.8063
+Epoch 3/20
+ - 5s - loss: 0.6439 - acc: 0.7932 - val_loss: 0.6916 - val_acc: 0.8048
+Epoch 4/20
+ - 5s - loss: 0.6452 - acc: 0.7969 - val_loss: 0.6257 - val_acc: 0.8063
+Epoch 5/20
+ - 6s - loss: 0.6421 - acc: 0.7939 - val_loss: 0.6005 - val_acc: 0.8063
+Epoch 6/20
+ - 5s - loss: 0.6363 - acc: 0.7999 - val_loss: 0.6384 - val_acc: 0.8048
+Epoch 7/20
+ - 5s - loss: 0.6338 - acc: 0.7977 - val_loss: 0.6927 - val_acc: 0.8048
+Epoch 8/20
+ - 5s - loss: 0.6330 - acc: 0.7965 - val_loss: 0.6236 - val_acc: 0.8048
+Epoch 9/20
+ - 6s - loss: 0.6313 - acc: 0.7988 - val_loss: 0.6535 - val_acc: 0.8048
+Epoch 10/20
+ - 5s - loss: 0.6348 - acc: 0.7988 - val_loss: 0.6426 - val_acc: 0.8048
+Epoch 11/20
+ - 6s - loss: 0.6360 - acc: 0.7977 - val_loss: 0.5936 - val_acc: 0.8063
+Epoch 12/20
+ - 6s - loss: 0.6278 - acc: 0.7969 - val_loss: 0.6071 - val_acc: 0.8063
+Epoch 13/20
+ - 6s - loss: 0.6235 - acc: 0.7969 - val_loss: 0.5944 - val_acc: 0.8063
+Epoch 14/20
+ - 6s - loss: 0.6268 - acc: 0.7965 - val_loss: 0.6096 - val_acc: 0.8063
+Epoch 15/20
+ - 5s - loss: 0.6269 - acc: 0.7962 - val_loss: 0.6071 - val_acc: 0.8063
+Epoch 16/20
+ - 6s - loss: 0.6295 - acc: 0.7992 - val_loss: 0.6308 - val_acc: 0.8048
+Epoch 17/20
+ - 6s - loss: 0.6295 - acc: 0.7965 - val_loss: 0.6305 - val_acc: 0.8048
+Epoch 18/20
+ - 5s - loss: 0.6263 - acc: 0.7988 - val_loss: 0.6030 - val_acc: 0.8063
+Epoch 19/20
+ - 5s - loss: 0.6246 - acc: 0.7965 - val_loss: 0.6134 - val_acc: 0.8048
+Epoch 20/20
+ - 5s - loss: 0.6230 - acc: 0.7992 - val_loss: 0.5942 - val_acc: 0.8063
+
+  32/1670 [..............................] - ETA: 0s
+1670/1670 [==============================] - 0s 19us/step
+------------------------------
+Test set statistics
+------------------------------
+Global statistics
+------------------------------
+Loss: 0.5965
+Accuracy: 0.8036
+------------------------------
+Class specific statistics
+------------------------------
+Precision for GALAXY: 0.7410
+Precision for QSO: 0.0000
+Precision for STAR: 0.9270
+------------------------------
+Recall for GALAXY: 0.9739
+Recall for QSO: 0.0000
+Recall for STAR: 0.7475
+------------------------------
+F-Score for GALAXY: 0.8416
+F-Score for QSO: 0.0000
+F-Score for STAR: 0.8276
+------------------------------
+Support for GALAXY: 843
+Support for QSO: 130
+Support for STAR: 697
+------------------------------
+Confusion Matrix
+------------------------------
+tr/pr	GALAXY	QSO	STAR
+GALAXY	821	0	22
+QSO	111	0	19
+STAR	176	0	521
+------------------------------

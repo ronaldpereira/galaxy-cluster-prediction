@@ -1,0 +1,80 @@
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 1000)              18000     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 1000)              0         
+_________________________________________________________________
+activation_1 (Activation)    (None, 1000)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 1000)              1001000   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 1000)              0         
+_________________________________________________________________
+activation_2 (Activation)    (None, 1000)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 3)                 3003      
+_________________________________________________________________
+activation_3 (Activation)    (None, 3)                 0         
+=================================================================
+Total params: 1,022,003
+Trainable params: 1,022,003
+Non-trainable params: 0
+_________________________________________________________________
+Train on 2664 samples, validate on 666 samples
+Epoch 1/10
+ - 8s - loss: 1.2727 - acc: 0.6854 - val_loss: 1.5522 - val_acc: 0.3739
+Epoch 2/10
+ - 7s - loss: 1.4553 - acc: 0.6926 - val_loss: 1.8036 - val_acc: 0.7988
+Epoch 3/10
+ - 7s - loss: 1.6800 - acc: 0.6869 - val_loss: 1.9154 - val_acc: 0.7973
+Epoch 4/10
+ - 7s - loss: 1.8534 - acc: 0.6806 - val_loss: 2.4519 - val_acc: 0.7117
+Epoch 5/10
+ - 7s - loss: 1.9410 - acc: 0.6941 - val_loss: 2.0885 - val_acc: 0.7973
+Epoch 6/10
+ - 7s - loss: 2.0607 - acc: 0.6843 - val_loss: 1.6122 - val_acc: 0.7342
+Epoch 7/10
+ - 7s - loss: 2.0805 - acc: 0.6899 - val_loss: 2.5963 - val_acc: 0.6937
+Epoch 8/10
+ - 7s - loss: 2.1288 - acc: 0.6896 - val_loss: 3.0252 - val_acc: 0.7568
+Epoch 9/10
+ - 7s - loss: 2.2288 - acc: 0.6907 - val_loss: 1.5397 - val_acc: 0.7943
+Epoch 10/10
+ - 7s - loss: 2.2687 - acc: 0.6993 - val_loss: 2.9218 - val_acc: 0.7598
+
+  32/1670 [..............................] - ETA: 0s
+1670/1670 [==============================] - 0s 20us/step
+------------------------------
+Test set statistics
+------------------------------
+Global statistics
+------------------------------
+Loss: 2.6372
+Accuracy: 0.7850
+------------------------------
+Class specific statistics
+------------------------------
+Precision for GALAXY: 0.7600
+Precision for QSO: 0.2143
+Precision for STAR: 0.9214
+------------------------------
+Recall for GALAXY: 0.9699
+Recall for QSO: 0.1049
+Recall for STAR: 0.6903
+------------------------------
+F-Score for GALAXY: 0.8522
+F-Score for QSO: 0.1408
+F-Score for STAR: 0.7893
+------------------------------
+Support for GALAXY: 865
+Support for QSO: 143
+Support for STAR: 662
+------------------------------
+Confusion Matrix
+------------------------------
+tr/pr	GALAXY	QSO	STAR
+GALAXY	839	5	21
+QSO	110	15	18
+STAR	155	50	457
+------------------------------
